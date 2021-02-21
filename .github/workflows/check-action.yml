@@ -1,0 +1,27 @@
+on: [push]
+jobs:
+  check-this-action:
+    name: Check that this action works
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Packages
+        run: npm ci
+      - name: Prepare dist
+        run: npm run prepare
+      - name: Run this action
+        uses: ./
+        with:
+          cache-key: 'elm-home-${{ matrix.os }}-0'
+          cache-restore-key: 'elm-home-${{ matrix.os }}'
+      - run: elm --version
+      - run: elm-format --help
+      - run: elm-json --version

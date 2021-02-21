@@ -1,0 +1,22 @@
+# More info at
+# https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action
+
+name: 'Install Elm tools and cache $ELM_HOME'
+description: 'Install Elm tools and cache $ELM_HOME'
+
+inputs:
+  cache-key:
+    description: 'A key for restoring and saving the cache.'
+    required: true
+  cache-restore-key:
+    description: 'A key for restoring the cache if no cache hit occurred for cache-key.'
+    required: false
+  elm-tooling-dir:
+    description: 'The directory containing the `elm-tooling.json` file. If not provided, it defaults to the project root.'
+    required: false
+
+runs:
+  using: 'node12'
+  main: 'dist/main.js'
+  post: 'dist/post.js'
+  post-if: 'success()'
