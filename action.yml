@@ -20,3 +20,8 @@ runs:
   main: 'dist/main.js'
   post: 'dist/post.js'
   post-if: 'success()'
+
+branding:
+  # icon: 'tool' # noooo it's not available
+  icon: 'package'
+  color: 'blue'
