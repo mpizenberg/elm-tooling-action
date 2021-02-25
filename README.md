@@ -14,7 +14,7 @@ for more efficient builds! You can use this action as follows.
 
 ```yaml
       - name: Install elm, elm-format and cache the ELM_HOME directory
-        uses: mpizenberg/elm-tooling-action@1.0
+        uses: mpizenberg/elm-tooling-action@v1.0
         with:
           cache-key: elm-home-${{ hashFiles('elm-tooling.json', 'elm.json') }}
 
