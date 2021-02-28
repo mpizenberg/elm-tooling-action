@@ -25,3 +25,4 @@ jobs:
       - run: elm --version
       - run: elm-format --help
       - run: elm-json --version
+      - run: elm-test-rs --version

@@ -5,7 +5,7 @@
 > https://elm-tooling.github.io/elm-tooling-cli/ci/
 
 This action lets you install tools supported by elm-tooling,
-such as elm, elm-format and elm-json in your GitHub CI,
+such as elm, elm-format, elm-json and elm-test-rs in your GitHub CI,
 without the need of npm and `package.json`.
 
 It will also cache your home Elm directory,
@@ -14,7 +14,7 @@ for more efficient builds! You can use this action as follows.
 
 ```yaml
       - name: Install elm, elm-format and cache the ELM_HOME directory
-        uses: mpizenberg/elm-tooling-action@v1.0
+        uses: mpizenberg/elm-tooling-action@v1.1
         with:
           cache-key: elm-home-${{ hashFiles('elm-tooling.json', 'elm.json') }}
 
@@ -45,7 +45,7 @@ There are two additional keys providing more flexibility for some use cases.
 2. `elm-tooling-dir`: The directory containing the `elm-tooling.json` file. If not provided, it defaults to the project root.
 
 ```yaml
-      - uses: mpizenberg/elm-tooling-action@1.0
+      - uses: mpizenberg/elm-tooling-action@v1.1
         with:
           cache-key: elm-home-${{ hashFiles('elm-tooling.json', 'elm.json') }}
           cache-restore-key: elm-home
