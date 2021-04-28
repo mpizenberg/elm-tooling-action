@@ -30,11 +30,9 @@ async function main() {
 
     // Change directory to the one containing elm-tooling.json
     const currentDir = path.resolve(elmToolingDir ? elmToolingDir : ".");
-    process.chdir(currentDir);
-    core.info(`Changed CWD to: ${currentDir}`);
 
     // Install Elm tools and add them to PATH
-    const exitCode = await elmToolingCli(["install"]);
+    const exitCode = await elmToolingCli(["install"], { cwd: currentDir });
     if (exitCode == 0) {
       core.addPath(path.join(currentDir, "node_modules", ".bin"));
     } else {
