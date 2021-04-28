@@ -6,12 +6,12 @@
   "author": "Matthieu Pizenberg",
   "license": "MIT",
   "dependencies": {
-    "@actions/cache": "^1.0.6",
-    "@actions/core": "^1.2.6",
+    "@actions/cache": "^1.0.7",
+    "@actions/core": "^1.2.7",
     "elm-tooling": "^1.3.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.27.0"
+    "@vercel/ncc": "^0.28.3"
   },
   "scripts": {
     "prepare": "npm run build-main && npm run build-post",
