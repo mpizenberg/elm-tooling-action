@@ -1,6 +1,6 @@
 {
   "name": "elm-tooling-action",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Install Elm tools and cache $ELM_HOME",
   "main": "src/main.js",
   "author": "Matthieu Pizenberg",
