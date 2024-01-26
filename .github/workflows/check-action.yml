@@ -1,4 +1,4 @@
-on: [push]
+on: [push, pull_request]
 jobs:
   check-this-action:
     name: Check that this action works
