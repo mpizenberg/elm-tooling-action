@@ -1,4 +1,4 @@
-on: [push, pull_request]
+on: [push]
 jobs:
   check-this-action:
     name: Check that this action works
@@ -12,7 +12,7 @@ jobs:
           - macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Install Packages
         run: npm ci
       - name: Prepare dist
@@ -20,8 +20,8 @@ jobs:
       - name: Run this action
         uses: ./
         with:
-          cache-key: 'elm-home-${{ matrix.os }}-0'
-          cache-restore-key: 'elm-home-${{ matrix.os }}'
+          cache-key: "elm-home-${{ matrix.os }}-0"
+          cache-restore-key: "elm-home-${{ matrix.os }}"
       - run: elm --version
       - run: elm-format --help
       - run: elm-json --version
