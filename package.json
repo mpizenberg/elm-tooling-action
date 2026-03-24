@@ -1,12 +1,12 @@
 {
   "name": "elm-tooling-action",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Install Elm tools and cache $ELM_HOME",
   "main": "src/main.js",
   "author": "Matthieu Pizenberg",
   "license": "MIT",
   "dependencies": {
-    "@actions/cache": "^4.0.3",
+    "@actions/cache": "^5.0.3",
     "@actions/core": "^1.11.1",
     "elm-tooling": "^1.15.1"
   },
