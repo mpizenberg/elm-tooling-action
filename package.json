@@ -1,21 +1,21 @@
 {
   "name": "elm-tooling-action",
-  "version": "1.7.0",
+  "version": "2.0.0",
   "description": "Install Elm tools and cache $ELM_HOME",
-  "main": "src/main.js",
+  "main": "src/main.mjs",
   "author": "Matthieu Pizenberg",
   "license": "MIT",
   "dependencies": {
-    "@actions/cache": "^4.0.3",
-    "@actions/core": "^1.11.1",
-    "elm-tooling": "^1.15.1"
+    "@actions/cache": "^6.1.0",
+    "@actions/core": "^3.0.1",
+    "elm-tooling": "^1.18.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.38.3"
+    "@vercel/ncc": "^0.44.0"
   },
   "scripts": {
     "prepare": "npm run build-main && npm run build-post",
-    "build-main": "ncc build --minify src/main.js -o dist --license licenses.txt && mv dist/index.js dist/main.js",
-    "build-post": "ncc build --minify src/post.js -o dist && mv dist/index.js dist/post.js"
+    "build-main": "ncc build --minify src/main.mjs -o dist --license licenses.txt && mv dist/index.mjs dist/main.mjs",
+    "build-post": "ncc build --minify src/post.mjs -o dist && mv dist/index.mjs dist/post.mjs"
   }
 }

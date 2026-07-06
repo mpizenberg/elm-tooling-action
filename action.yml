@@ -16,9 +16,9 @@ inputs:
     required: false
 
 runs:
-  using: 'node20'
-  main: 'dist/main.js'
-  post: 'dist/post.js'
+  using: 'node24'
+  main: 'dist/main.mjs'
+  post: 'dist/post.mjs'
   post-if: 'success()'
 
 branding:

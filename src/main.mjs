@@ -1,7 +1,7 @@
-const core = require("@actions/core");
-const cache = require("@actions/cache");
-const path = require("path");
-const elmToolingCli = require("elm-tooling");
+import * as core from "@actions/core";
+import * as cache from "@actions/cache";
+import path from "path";
+import elmToolingCli from "elm-tooling";
 
 // Main
 main();
