@@ -33,8 +33,8 @@ It should look like follows.
 ```json
 {
   "tools": {
-    "elm": "0.19.1",
-    "elm-format": "0.8.5"
+    "elm": "0.19.2",
+    "elm-format": "0.8.8"
   }
 }
 ```
